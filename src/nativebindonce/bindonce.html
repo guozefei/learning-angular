@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body ng-app="app">
+  <div ng-controller="firstCtrl">
+    
+    Bind Once Reapter
+    <hr/>
+    <li>
+      <p ng-bind="(now|date:'ss')"></p>
+    </li>
+  <li ng-repeat="info in Profile"  ng-if="::(info.show === true)"
+    <p>{{::info.count}}</p>
+    ngbind count:<p ng-bind="info.count"></p>
+    <p ng-bind="info.count" ng-class="::{red:info.color}"></p>
+    <p>Count {{::info.count}} message {{info.Message}} </p>
+   </li>
+    <br/><br/><br/>
+    Standart Repeter
+    <hr/>
+   <li ng-repeat="info in Profile">                   
+    <p>Count {{info.count}} message {{info.Message}} </p>
+   </li>
+    <button ng-click="update()">count ++</button>
+  <button ng-click="toggle()">showorhide</button>
+  <button ng-click="getTime()">getTime</button>
+      </div>
+</body>
+</html>
